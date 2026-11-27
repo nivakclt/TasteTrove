@@ -1,0 +1,219 @@
+
+  <style>
+    /* Premium Footer Styling */
+    .premium-footer {
+      background: linear-gradient(135deg, #0b241c 0%, #143d2f 60%, #1a4f3d 100%);
+      color: #e2e8f0;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      border-top: 3px solid #f59e0b;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .premium-footer::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      right: -10%;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(245, 158, 11, 0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .brand-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.85rem;
+      letter-spacing: 0.5px;
+      color: #ffffff;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-icon {
+      color: #f59e0b;
+      transition: transform 0.3s ease;
+    }
+
+    .brand-title:hover .brand-icon {
+      transform: scale(1.15) rotate(-5deg);
+    }
+
+    .brand-desc {
+      color: #94a3b8;
+      font-size: 0.92rem;
+      line-height: 1.75;
+      margin-top: 12px;
+    }
+
+    .footer-heading {
+      font-size: 1.1rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #ffffff;
+      margin-bottom: 1.25rem;
+      position: relative;
+      display: inline-block;
+    }
+
+    .footer-heading::after {
+      content: "";
+      display: block;
+      width: 30px;
+      height: 2px;
+      background: #f59e0b;
+      margin: 6px auto 0;
+      border-radius: 2px;
+    }
+
+    .footer-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+
+    .footer-link {
+      color: #cbd5e1;
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: all 0.25s ease;
+      display: inline-block;
+      position: relative;
+    }
+
+    .footer-link:hover {
+      color: #f59e0b;
+      transform: translateX(4px);
+    }
+
+    /* Newsletter & Socials for the 3rd Column */
+    .newsletter-box {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 12px;
+      padding: 20px;
+    }
+
+    .newsletter-input {
+      background: rgba(0, 0, 0, 0.25);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #fff;
+      border-radius: 8px 0 0 8px;
+      font-size: 0.9rem;
+    }
+
+    .newsletter-input::placeholder {
+      color: #94a3b8;
+    }
+
+    .newsletter-input:focus {
+      background: rgba(0, 0, 0, 0.4);
+      border-color: #f59e0b;
+      color: #fff;
+      box-shadow: none;
+    }
+
+    .newsletter-btn {
+      background: #f59e0b;
+      color: #0b241c;
+      font-weight: 600;
+      border: none;
+      border-radius: 0 8px 8px 0;
+      padding: 0 18px;
+      transition: background 0.25s ease;
+    }
+
+    .newsletter-btn:hover {
+      background: #fbbf24;
+      color: #0b241c;
+    }
+
+    .social-icons a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.06);
+      color: #e2e8f0;
+      margin-right: 10px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .social-icons a:hover {
+      background: #f59e0b;
+      color: #0b241c;
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(245, 158, 11, 0.3);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      margin-top: 2.5rem;
+      padding-top: 1.25rem;
+      font-size: 0.85rem;
+      color: #64748b;
+    }
+  </style>
+  <footer class="container-fluid premium-footer py-5 px-4 px-md-5">
+    <div class="container">
+      <div class="row gy-4">
+        
+        <!-- Brand Column -->
+        <div class="col-sm-12 col-md-4">
+          <h3 class="brand-title">
+            TasteTrove <i class="fa-solid fa-fire-flame-simple brand-icon"></i>
+          </h3>
+          <p class="brand-desc" style="text-align: justify;">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore obcaecati
+            assumenda perspiciatis, dignissimos cumque nisi ut ea, dolores perferendis sit
+            culpa. Lorem ipsum dolor sit amet.
+          </p>
+        </div>
+
+        <!-- Links Column -->
+        <div class="col-sm-12 col-md-4 text-center">
+          <h4 class="footer-heading">Explore</h4>
+          <ul class="footer-links">
+            <li><a href="/" class="footer-link">Home</a></li>
+            <li><a href="/recipes" class="footer-link">Recipes</a></li>
+            <li><a href="/about" class="footer-link">About Us</a></li>
+          </ul>
+        </div>
+
+        <!-- 3rd Column (Glassmorphism Newsletter Card) -->
+        <div class="col-sm-12 col-md-4">
+          <div class="newsletter-box">
+            <h5 class="text-white fw-semibold mb-2">Weekly Recipes</h5>
+            <p class="small text-secondary mb-3">Get fresh chef-curated recipes delivered straight to your inbox.</p>
+            <form class="input-group">
+              <input type="email" class="form-control newsletter-input" placeholder="Your email address" required>
+              <button class="btn newsletter-btn" type="submit">Join</button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Copyright Bar -->
+      <div class="row footer-bottom text-center text-md-between align-items-center">
+        <div class="col-md-6 text-md-start">
+          &copy; 2026 TasteTrov. All rights reserved.
+        </div>
+        <div class="col-md-6 text-md-end mt-2 mt-md-0">
+          Crafted with <i class="fa-solid fa-heart text-warning mx-1"></i> for food lovers
+        </div>
+      </div>
+    </div>
+  </footer>

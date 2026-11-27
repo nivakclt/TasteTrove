@@ -1,0 +1,204 @@
+<style>
+  body {
+    background-color: #f8fafc;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+
+  /* Floating Dynamic Island / Notch Wrapper */
+  .notch-nav-wrapper {
+    position: sticky;
+    top: 10px;
+    z-index: 1030;
+    display: flex;
+    justify-content: center;
+    padding: 0 12px;
+    pointer-events: none;
+    box-shadow: none !important;
+  }
+
+  /* Thin & Compact Pill Container */
+  .notch-navbar {
+    pointer-events: auto;
+    background: rgb(16, 52, 40);
+    padding: 3px 6px 3px 14px;
+    border-radius: 50px;
+    border: none !important;
+    box-shadow: none !important;
+    min-height: 46px;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    max-width: fit-content;
+  }
+
+  /* Subtle hover without growing bulky */
+  @media (min-width: 992px) {
+    .notch-navbar:hover {
+      padding: 3px 8px 3px 16px;
+      box-shadow: none !important;
+    }
+  }
+
+  /* Compact Brand */
+  .notch-navbar .navbar-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #ffffff;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin-right: 10px;
+    padding: 0;
+    line-height: 1;
+  }
+
+  .brand-icon {
+    color: #f59e0b;
+    font-size: 0.85rem;
+    transition: transform 0.3s ease;
+  }
+
+  .navbar-brand:hover .brand-icon {
+    transform: scale(1.15) rotate(-8deg);
+  }
+
+  /* Thin Nav Links */
+  .notch-navbar .nav-link {
+    color: #e2e8f0 !important;
+    font-size: 0.78rem;
+    font-weight: 500;
+    padding: 3px 10px !important;
+    border-radius: 50px;
+    line-height: 1.2;
+    transition: color 0.2s ease;
+    margin: 0 1px;
+  }
+
+  .notch-navbar .nav-link:hover {
+    color: #ffffff !important;
+  }
+
+  .notch-navbar .nav-link.active {
+    color: #f59e0b !important;
+    font-weight: 600;
+  }
+
+  /* Slim Mini Search */
+  .notch-search {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.14);
+    border-radius: 50px;
+    padding: 2px 3px 2px 10px;
+    margin-left: 8px;
+    height: 26px;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .notch-search input {
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 0.75rem;
+    width: 85px;
+    outline: none;
+    padding: 0;
+    transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .notch-search input::placeholder {
+    color: rgba(255, 255, 255, 0.75);
+  }
+
+  .notch-search input:focus {
+    width: 125px;
+  }
+
+  .notch-search-btn {
+    background: #f59e0b;
+    color: #0b241c;
+    border: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.65rem;
+    padding: 0;
+    transition: transform 0.2s ease, background 0.2s ease;
+  }
+
+  .notch-search-btn:hover {
+    background: #fbbf24;
+    transform: scale(1.06);
+  }
+
+  /* Slim Mobile Adjustment */
+  @media (max-width: 991.98px) {
+    .notch-navbar {
+      max-width: 100%;
+      width: 100%;
+      border-radius: 20px;
+      padding: 4px 12px;
+    }
+    .notch-search {
+      margin: 6px 0 2px 0;
+      width: 100%;
+      height: 28px;
+    }
+    .notch-search input,
+    .notch-search input:focus {
+      width: 100%;
+    }
+  }
+</style>
+  <!-- Floating iPhone Dynamic Island Style Navbar -->
+  <div class="notch-nav-wrapper">
+    <nav class="navbar navbar-expand-lg navbar-dark notch-navbar">
+      
+      <!-- Brand -->
+      <a class="navbar-brand" href="#">
+        TasteTrove <i class="fa-solid fa-fire-flame-simple brand-icon"></i>
+      </a>
+
+      <!-- Mobile Toggle -->
+      <button
+        class="navbar-toggler border-0 shadow-none"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#notchNavCollapse"
+        aria-controls="notchNavCollapse"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon" style="width: 1.2em; height: 1.2em;"></span>
+      </button>
+
+      <!-- Links & Compact Search -->
+      <div class="collapse navbar-collapse" id="notchNavCollapse">
+        <ul class="navbar-nav align-items-lg-center">
+          <li class="nav-item">
+            <a class="nav-link active" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/recipes">Recipes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contact">Contact</a>
+          </li>
+        </ul>
+
+        <!-- Morphing Pill Search -->
+        <form class="notch-search" role="search">
+          <input type="text" placeholder="Search..." aria-label="Search">
+          <button class="notch-search-btn" type="submit" aria-label="Submit search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>
+      </div>
+
+    </nav>
+  </div>

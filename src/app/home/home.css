@@ -1,0 +1,83 @@
+.banner {
+  min-height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  background:
+    linear-gradient(
+      120deg,
+      rgba(25, 15, 8, 0.75),
+      rgba(25, 15, 8, 0.35)
+    ),
+    url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTb6yVtYaKOyebqNmGkkY45_ikK-uDo0bSHo1yUx8x1ZA&s=10")
+    center / cover no-repeat;
+}
+
+.banner-child {
+  max-width: 990px;
+  padding: 35px 25px;
+  color: #fff;
+}
+
+.banner-tag {
+  display: inline-block;
+  margin-bottom: 18px;
+  padding: 7px 16px;
+  border: 1px solid #ffbd73;
+  border-radius: 30px;
+  color: #ffbd73;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.banner-child h1 {
+  margin: 0 0 15px;
+  font-family: Georgia, serif;
+  font-size: clamp(2rem, 5vw, 3.8rem);
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.banner-child p {
+  max-width: 550px;
+  margin: 0 auto 25px;
+  font-family: Arial, sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #f1e8df;
+}
+
+.banner-btn {
+  display: inline-block;
+  padding: 13px 28px;
+  background: #e97724;
+  color: #fff;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.banner-btn:hover {
+  background: #c95c10;
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+@media (max-width: 767px) {
+  .banner {
+    min-height: 350px;
+    padding: 25px 15px;
+  }
+
+  .banner-child {
+    padding: 20px 5px;
+  }
+
+  .banner-child p {
+    font-size: 0.95rem;
+  }
+}
