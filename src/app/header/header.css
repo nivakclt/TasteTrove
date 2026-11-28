@@ -1,0 +1,53 @@
+.notch-account {
+  margin-left: 8px;
+}
+
+.account-btn {
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.14);
+  color: #f59e0b;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.account-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.notch-account .dropdown-menu {
+  background: #103428;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  padding: 5px;
+  min-width: 140px;
+}
+
+.notch-account .dropdown-item {
+  color: #e2e8f0;
+  font-size: 0.8rem;
+  border-radius: 8px;
+  padding: 7px 10px;
+}
+
+.notch-account .dropdown-item:hover,
+.notch-account .dropdown-item:focus {
+  background: #f59e0b;
+  color: #103428;
+}
+
+.notch-account .dropdown-item i {
+  width: 16px;
+  margin-right: 5px;
+}
+
+@media (max-width: 991.98px) {
+  .notch-account {
+    margin: 6px 0 2px;
+  }
+}

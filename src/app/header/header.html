@@ -157,7 +157,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark notch-navbar">
       
       <!-- Brand -->
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" routerLink="/">
         TasteTrove <i class="fa-solid fa-fire-flame-simple brand-icon"></i>
       </a>
 
@@ -178,18 +178,51 @@
       <div class="collapse navbar-collapse" id="notchNavCollapse">
         <ul class="navbar-nav align-items-lg-center">
           <li class="nav-item">
-            <a class="nav-link active" href="/">Home</a>
+            <a class="nav-link active" routerLink="/">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/recipes">Recipes</a>
+            <a class="nav-link" routerLink="/recipes">Recipes</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/about">About</a>
+            <a class="nav-link" routerLink="/about">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/contact">Contact</a>
+            <a class="nav-link" routerLink="/contact">Contact</a>
           </li>
         </ul>
+
+        <!-- Account Dropdown -->
+<div class="dropdown notch-account">
+  <button
+    class="account-btn"
+    type="button"
+    id="accountDropdown"
+    data-bs-toggle="dropdown"
+    aria-expanded="false"
+    aria-label="Account menu"
+  >
+    <i class="fa-solid fa-user"></i>
+  </button>
+
+  <ul
+    class="dropdown-menu dropdown-menu-end"
+    aria-labelledby="accountDropdown"
+  >
+    <li>
+      <a class="dropdown-item" routerLink="/login">
+        <i class="fa-solid fa-right-to-bracket"></i>
+        Sign In
+      </a>
+    </li>
+
+    <li>
+      <a class="dropdown-item" routerLink="/register">
+        <i class="fa-solid fa-user-plus"></i>
+        Sign Up
+      </a>
+    </li>
+  </ul>
+</div>
 
         <!-- Morphing Pill Search -->
         <form class="notch-search" role="search">

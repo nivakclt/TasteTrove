@@ -1,1 +1,209 @@
-<p>register works!</p>
+<style>
+  .register-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 16px;
+    background: #f4f7f4;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+
+  .register-card {
+    width: 100%;
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+    border-radius: 24px;
+    background: white;
+    box-shadow: 0 20px 55px rgba(16, 52, 40, 0.12);
+  }
+
+  .register-form {
+    padding: 36px;
+  }
+
+  .register-brand {
+    font-family: 'Playfair Display', serif;
+
+    color: #103428;
+    margin-bottom: 20px;
+  }
+
+  .register-brand i {
+    color: #f59e0b;
+  }
+
+  .register-form h2,
+  .register-info h2 {
+    font-family: 'Playfair Display', serif;
+  }
+
+  .register-form h2 {
+    color: #103428;
+  }
+
+  .register-form label {
+    color: #103428;
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+
+  .register-form input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #d8e2da;
+    border-radius: 10px;
+    outline: none;
+  }
+
+  .register-form input:focus {
+    border-color: #103428;
+    box-shadow: 0 0 0 3px rgba(16, 52, 40, 0.1);
+  }
+
+  .register-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: #103428;
+    color: white;
+    font-weight: 600;
+  }
+
+  .register-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    background: linear-gradient(145deg, #103428, #194b39);
+    color: #fff;
+  }
+
+  .register-info h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+  }
+
+  .register-info p {
+    color: #fbbf24;
+    font-weight: 600;
+  }
+
+  .register-info ul {
+    padding-left: 20px;
+    line-height: 2.2;
+  }
+
+  .register-info li::marker {
+    color: #f59e0b;
+  }
+
+  .register-links {
+    text-align: center;
+    margin-top: 18px;
+  }
+
+  .register-links a {
+    color: #103428;
+    font-weight: 700;
+  }
+
+  .register-error {
+    color: #b91c1c;
+    font-size: 0.85rem;
+    margin: 8px 0;
+  }
+
+  @media (max-width: 767.98px) {
+    .register-card {
+      grid-template-columns: 1fr;
+    }
+
+    .register-form,
+    .register-info {
+      padding: 24px;
+    }
+  }
+</style>
+
+<div class="register-page">
+  <div class="register-card">
+
+    <!-- Registration form -->
+    <div class="register-form">
+      <div class="register-brand">
+        TasteTrove
+        <i class="fa-solid fa-fire-flame-simple"></i>
+      </div>
+
+      <h2>Create Your Account</h2>
+      <p class="text-muted">Join TasteTrove and explore recipes.</p>
+
+
+        <div class="mb-3">
+          <label for="name" class="form-label">Full Name</label>
+          <input
+            id="name"
+            type="text"
+            placeholder="Enter your full name"
+            autocomplete="name"
+            required
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="email" class="form-label">Email Address</label>
+          <input
+            id="email"
+            type="email"
+            placeholder="Enter your email"
+            autocomplete="email"
+            required
+            email
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input
+            id="password"
+            type="password"
+            placeholder="Create a password"
+            autocomplete="new-password"
+            required
+            minlength="8"
+          />
+        </div>
+
+        <button
+          type="submit"
+          class="register-btn"
+        >
+          Create Account
+        </button>
+
+      <div class="register-links">
+        <p>
+          Already have an account?
+          <a routerLink="/login">Sign In</a>
+        </p>
+        <a routerLink="/">Return to Home</a>
+      </div>
+    </div>
+
+    <!-- Benefits -->
+    <div class="register-info">
+      <h2>Discover Your Next Favorite Recipe</h2>
+      <p>What You Will Get</p>
+
+      <ul>
+        <li>Explore different recipes</li>
+        <li>Learn easy cooking methods</li>
+        <li>Save your favorite recipes</li>
+        <li>Download recipes for later</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
